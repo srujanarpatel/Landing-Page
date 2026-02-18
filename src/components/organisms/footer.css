@@ -1,0 +1,47 @@
+.footer {
+    margin-top: 4rem;
+    padding: 4rem 4% 2rem;
+    color: #757575;
+    font-size: 0.9rem;
+}
+
+.footer-social-links {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social-links svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

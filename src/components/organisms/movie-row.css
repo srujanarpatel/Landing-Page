@@ -1,0 +1,69 @@
+.movie-row {
+    margin: 3rem 0;
+    padding-left: 4%;
+}
+
+@media (max-width: 768px) {
+    .movie-row {
+        margin: 1.5rem 0;
+        padding-left: 1rem;
+        /* Less padding on mobile */
+    }
+
+    .movie-row-title {
+        font-size: 1.1rem;
+        margin-left: 0;
+    }
+}
+
+.movie-row-title {
+    color: #e5e5e5;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+}
+
+.movie-row-title:hover {
+    color: white;
+}
+
+.movie-row-list {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.movie-row-list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-row-list {
+    /* -ms-overflow-style: none; IE and Edge, handled by autoprefixer often but good to keep if valid */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.movie-row {
+    opacity: 0;
+    /* Start hidden */
+}
+
+.movie-row.visible {
+    animation: fadeIn 0.8s ease-out forwards;
+}
